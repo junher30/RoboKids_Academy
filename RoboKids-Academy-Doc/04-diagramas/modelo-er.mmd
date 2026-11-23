@@ -1,0 +1,24 @@
+erDiagram
+ USUARIO ||--o{ MEMBRESIA_GRUPO : pertenece
+ GRUPO ||--o{ MEMBRESIA_GRUPO : contiene
+ CURSO ||--o{ GRUPO : organiza
+ KIT ||--o{ VERSION_KIT : tiene
+ VERSION_KIT ||--o{ ETAPA : estructura
+ VERSION_KIT ||--o{ MATERIAL : incluye
+ VERSION_KIT ||--o{ RECURSO : ofrece
+ VERSION_KIT ||--o{ ASIGNACION : se_asigna
+ GRUPO ||--o{ ASIGNACION : recibe
+ ASIGNACION ||--o{ ACTIVIDAD : propone
+ ACTIVIDAD ||--o{ ENTREGA : recibe
+ USUARIO ||--o{ ENTREGA : envia
+ ENTREGA ||--o{ EVIDENCIA : adjunta
+ ENTREGA ||--o{ EVALUACION : evalua
+ USUARIO ||--o{ PROGRESO_META : avanza
+ META ||--o{ PROGRESO_META : registra
+ META ||--o{ REGLA_RECOMPENSA : habilita
+ RECOMPENSA ||--o{ REGLA_RECOMPENSA : define
+ REGLA_RECOMPENSA ||--o{ ADJUDICACION : entrega
+ USUARIO ||--o{ ADJUDICACION : obtiene
+ USUARIO ||--o{ PROYECTO : crea
+ PROYECTO ||--o{ VERSION_PROYECTO : guarda
+ PROYECTO ||--o{ EJECUCION : ejecuta
