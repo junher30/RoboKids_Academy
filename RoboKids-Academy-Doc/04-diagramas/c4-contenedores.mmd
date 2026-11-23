@@ -1,0 +1,9 @@
+flowchart TB
+ U[Usuarios] -->|HTTPS 443| W[web]
+ W -->|HTTPS /v1| A[api]
+ A -->|SQL 5432 red privada| D[(PostgreSQL)]
+ A -->|archivos privados| O[(Almacenamiento privado)]
+ A -->|trabajo efímero| R[runner]
+ R -.->|Acceso directo prohibido| D
+ R -.->|Acceso directo prohibido| O
+ W -->|Enlaces| Y[YouTube]
